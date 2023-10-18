@@ -1,0 +1,19 @@
+@media (max-width: 1199px) {
+  .product-delivery-line__left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .product-delivery-line {
+    flex-wrap: wrap;
+  }
+  .product-delivery-line__right {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+
+  .order-left {
+    width: calc(100% - 387px);
+    max-width: 495px;
+  }
+}

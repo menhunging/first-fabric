@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
+    <title>Оформление заказа 3</title>
+
+    <link rel="stylesheet" type="text/css" href="css/old/cbk.css" />
+    <link rel="stylesheet" type="text/css" href="css/old/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/old/slick.css" />
+    <link rel="stylesheet" type="text/css" href="libs/micromodal/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="css/old/style.css" />
+
+    <!-- НОВЫЕ СТИЛИ -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- /НОВЫЕ СТИЛИ -->
+
+</head>
+
+<body>
+
+    <main class="main">
+
+        <div class="order-section">
+            <div class="container">
+                <div class="order">
+                    <h2 class="order__caption">Оплата и доставка</h2>
+
+                    <div class="order-head">
+                        <a href="#" class="order-head__link">Шаг 1 - ваш заказ</a>
+                        <a href="#" class="order-head__link">Шаг 2 - профиль</a>
+                        <a href="#" class="order-head__link order-head__link--active">Шаг 3 - оплата и доставка</a>
+                        <a href=" #" class="order-head__link">Шаг 4 - покупатель</a>
+                    </div>
+
+                    <form class="order-body">
+                        <div class="order-row">
+                            <div class="order-left">
+
+                                <div class="order-left__block">
+                                    <div class="order-info">
+                                        <strong>Выберите способ оплаты</strong>
+                                    </div>
+
+                                    <div class="order-form">
+                                        <div class="order-checkbox-list">
+                                            <div class="order-checkbox">
+                                                <input type="radio" id="chk1" name="order">
+                                                <label for="chk1">Оплата на сайте Online</label>
+                                            </div>
+                                            <div class="order-checkbox">
+                                                <input type="radio" id="chk2" name="order" checked>
+                                                <label for="chk2">Оплата при получении</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-left__block">
+                                    <div class="order-info">
+                                        <strong>Выберите способ доставки</strong>
+                                    </div>
+
+                                    <div class="order-form">
+                                        <div class="order-checkbox-list">
+                                            <div class="order-checkbox">
+                                                <input type="radio" id="chk3" name="delivery">
+                                                <label for="chk3">Самовывоз из магазина</label>
+                                            </div>
+                                            <div class="order-checkbox">
+                                                <input type="radio" id="chk4" name="delivery" checked>
+                                                <label for="chk4">Доставка в пункт выдачи СДЭК</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-primary">Выбрать пункт выдачи СДЭК</button>
+
+                                    <div class="order-left__inner">
+                                        <strong class="order-left__title">Пункт выдачи</strong>
+
+                                        <div class="order-point">
+                                            <span class="order-point__text">ПВ г. Москва, ул. ОЧень длинная, д.
+                                                34</span>
+                                            <a href="#" class="order-point__change" data-target="modal-sdek">
+
+                                                выбрать другой
+
+
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M0.0179735 8.07764C0.0179735 7.13113 0.000956625 6.18416 0.0230326 5.23766C0.0428089 4.39739 0.187682 3.57506 0.518821 2.79459C1.03715 1.57259 1.97721 0.842708 3.2314 0.483514C4.04315 0.250797 4.87606 0.191467 5.71494 0.185489C6.17394 0.182269 6.6334 0.17629 7.09193 0.190088C7.22807 0.194227 7.37892 0.23332 7.49344 0.304607C7.70178 0.434303 7.76893 0.685876 7.69396 0.909855C7.6167 1.14211 7.40375 1.29664 7.14206 1.29802C6.50508 1.30216 5.86764 1.29067 5.23111 1.30538C4.59965 1.3201 3.97509 1.39875 3.36984 1.59283C2.26098 1.94788 1.58858 2.71502 1.33517 3.8317C1.21559 4.35876 1.13511 4.90606 1.12729 5.44554C1.10199 7.21253 1.11119 8.97999 1.12177 10.747C1.12545 11.3435 1.20777 11.9336 1.37518 12.5103C1.71368 13.6753 2.48818 14.39 3.65544 14.653C4.19952 14.7754 4.7643 14.8526 5.32126 14.8609C7.06526 14.8867 8.81017 14.8766 10.5551 14.8664C11.1516 14.8628 11.7435 14.7841 12.3198 14.6172C13.4825 14.2805 14.2041 13.5106 14.4699 12.3424C14.5913 11.8098 14.6488 11.2575 14.6805 10.7111C14.7164 10.0875 14.6879 9.4606 14.693 8.83512C14.6953 8.54583 14.8958 8.31771 15.1736 8.2685C15.4081 8.22711 15.6717 8.37796 15.7609 8.6208C15.7935 8.70956 15.8055 8.8112 15.8041 8.9064C15.7903 9.73793 15.7977 10.5708 15.7466 11.4001C15.6928 12.2698 15.4835 13.1077 15.0379 13.8703C14.4221 14.9244 13.4595 15.48 12.3065 15.7601C11.572 15.9385 10.8232 15.9863 10.0713 15.9859C8.40131 15.985 6.73136 15.9896 5.06187 15.9638C4.21608 15.9509 3.38777 15.7987 2.60224 15.4639C1.38024 14.9428 0.653576 14.0013 0.296222 12.7467C0.058446 11.9119 0.0032562 11.056 0.000956624 10.1942C-0.000883037 9.4882 0.000496709 8.78269 0.000496709 8.07672C0.00601569 8.07764 0.0119946 8.07764 0.0179735 8.07764Z"
+                                                        fill="black" />
+                                                    <path
+                                                        d="M16.0002 3.17483C15.974 4.10984 15.6111 4.74084 15.09 5.29274C14.6844 5.7223 14.2608 6.1353 13.8432 6.55291C12.3301 8.06695 10.8105 9.57501 9.30523 11.0969C8.83106 11.5766 8.28652 11.8806 7.61597 11.9675C6.91735 12.0576 6.22196 12.1726 5.52289 12.2559C4.42461 12.3869 3.58481 11.5283 3.73152 10.4337C3.83316 9.67343 3.93296 8.91227 4.05392 8.15479C4.13671 7.63785 4.3823 7.19403 4.75345 6.82242C6.31992 5.25595 7.8841 3.68718 9.45425 2.12484C9.95417 1.62721 10.4523 1.12591 10.9839 0.663692C11.4604 0.249308 12.0302 0.00325345 12.6773 3.40429e-05C13.2794 -0.00318536 13.8078 0.222173 14.282 0.575848C14.9346 1.0629 15.4929 1.63733 15.7983 2.40723C15.9128 2.6956 15.9584 3.0111 16.0002 3.17483ZM9.82954 3.33396C9.8047 3.35006 9.79366 3.35512 9.78585 3.36294C8.34953 4.79833 6.91183 6.23235 5.4792 7.67142C5.29431 7.85723 5.18347 8.09225 5.14438 8.3544C5.06573 8.88054 4.98479 9.40668 4.9135 9.93375C4.87671 10.2051 4.83992 10.4792 4.83808 10.7524C4.8367 10.9879 5.0133 11.1406 5.24924 11.1521C5.3518 11.1571 5.45574 11.1511 5.55738 11.1373C6.17551 11.0518 6.7918 10.9561 7.41084 10.8775C7.81189 10.8264 8.15085 10.6779 8.44059 10.3858C9.79826 9.01805 11.1642 7.65809 12.5269 6.29536C12.567 6.25534 12.6047 6.21395 12.6594 6.15692C11.3854 5.54293 10.4477 4.60563 9.82954 3.33396ZM12.6989 1.11993C12.2961 1.11165 11.9672 1.27538 11.6848 1.51683C11.3583 1.796 11.0552 2.10277 10.7494 2.40493C10.7149 2.43897 10.7025 2.53509 10.725 2.58108C10.8689 2.87956 11.0019 3.18679 11.1817 3.46366C11.7221 4.29564 12.4672 4.88709 13.3893 5.25273C13.4417 5.27342 13.5388 5.27802 13.5686 5.24629C13.9173 4.87468 14.2857 4.5164 14.5915 4.11122C14.9728 3.60669 14.9553 3.05571 14.6186 2.52129C14.327 2.05862 13.9513 1.67551 13.4923 1.37794C13.2481 1.21973 12.9832 1.11487 12.6989 1.11993Z"
+                                                        fill="black" />
+                                                </svg>
+
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="order-right">
+
+                                <div class="order-small">
+                                    <span class="caption">Ваш заказ</span>
+
+                                    <div class="order-list">
+                                        <div class="order-item">
+                                            <div class="order-col">
+                                                <img class="order-item__img"
+                                                    src="https://first-fabric.ru/upload/resize_cache/iblock/4ee/570_570_2/2f1i2drc3hzhymcfegqx6m3pa20peyw7.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div class="order-col">
+                                                <a href="#" class="order-item__name">Сумка-багет</a>
+                                                <span class="order-item__article">Артикул: 16198</span>
+                                            </div>
+                                            <div class="order-col">
+                                                <div class="order-item__price">8 900 р.</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="order-item">
+                                            <div class="order-col">
+                                                <img class="order-item__img"
+                                                    src="https://first-fabric.ru/upload/resize_cache/iblock/4ee/570_570_2/2f1i2drc3hzhymcfegqx6m3pa20peyw7.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div class="order-col">
+                                                <a href="#" class="order-item__name">Сумка-багет</a>
+                                                <span class="order-item__article">Артикул: 16198</span>
+                                            </div>
+                                            <div class="order-col">
+                                                <div class="order-item__price">8 900 р.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-result__summary">
+                                        <div class="order-result__text">
+                                            <span>Сумма:</span>
+                                            <span>10 990р.</span>
+                                        </div>
+                                        <div class="order-result__text">
+                                            <span>Промокод:</span>
+                                            <span>-500 р.</span>
+                                        </div>
+                                        <div class="order-result__text">
+                                            <span>Доставка:<br /><span class="delivery-day">1-2 дня</span></span>
+                                            <span>260 р</span>
+                                        </div>
+
+
+                                        <strong class="order-result__text order-result__itog">
+                                            <span>Итоговая сумма:</span>
+                                            <span>10 990р.</span>
+                                        </strong>
+                                    </div>
+                                </div>
+
+                                <div class="order-right__controls">
+                                    <button class="btn btn-simple">Назад</button>
+                                    <button class="btn btn-primary">Далее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="micromodal-slide modal" id="modal-sdek" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true">
+                <div class="modal__inner">
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 2L22.0713 22M22.0713 22L2 42M22.0713 22L42 41.8579M22.0713 22L42 2.14209"
+                                stroke="#052636" stroke-width="4" />
+                        </svg>
+                    </button>
+                    <div class="modal__content" autocomplete="off">
+                        <img class="primer-img" src="img/primer.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="topWindowOuter absoluteCenter">
+        <div class="topWindowInner">
+            <div class="modal-close js-close-form">
+                X<!--svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M256,0C114.844,0,0,114.844,0,256s114.844,256,256,256s256-114.844,256-256S397.156,0,256,0z M256,490.667 C126.604,490.667,21.333,385.396,21.333,256S126.604,21.333,256,21.333S490.667,126.604,490.667,256S385.396,490.667,256,490.667 z"/><path d="M359.542,152.458c-4.167-4.167-10.917-4.167-15.083,0L256,240.917l-88.458-88.458c-4.167-4.167-10.917-4.167-15.083,0 c-4.167,4.167-4.167,10.917,0,15.083L240.917,256l-88.458,88.458c-4.167,4.167-4.167,10.917,0,15.083 c2.083,2.083,4.813,3.125,7.542,3.125s5.458-1.042,7.542-3.125L256,271.083l88.458,88.458c2.083,2.083,4.813,3.125,7.542,3.125 c2.729,0,5.458-1.042,7.542-3.125c4.167-4.167,4.167-10.917,0-15.083L271.083,256l88.458-88.458 C363.708,163.375,363.708,156.625,359.542,152.458z"/></svg-->
+            </div>
+            <div class="popup js-formDiv" id="registration">
+                <form method="post" class="js-reg-form regForm formTabber" novalidate="novalidate">
+                    <div class="title_modal">Авторизация/Регистрация</div>
+                    <br style="clear: both">
+                    <div class="row">
+                        <div class="col-12" style="display:flex;">
+                            <a href="#a" class="js-formLoad registr_btn" style="width: 100%;"
+                                data-attr="doLogin">Вход</a>
+                            <p class="btn btn-primary" style="color: #fff;width: 100%;">Регистрация</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 input-row">
+                            <label for="NAME">ваше имя <span class="req">*</span></label>
+                            <input type="text" name="NAME" id="NAME" value="" class="input-text field_NAME"
+                                placeholder="ваше имя" autocomplete="name">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-6 input-row">
+                            <label for="LAST_NAME">ваша фамилия <span class="req">*</span></label>
+                            <input type="text" name="LAST_NAME" id="LAST_NAME" value=""
+                                class="input-text field_LAST_NAME" placeholder="ваша фамилия" autocomplete="name">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-6 input-row">
+                            <label for="CITY">ваш город<span class="req">*</span> </label>
+                            <input type="text" name="CITY" id="CITY" value="" class="input-text field_CITY"
+                                placeholder="Ваш город" autocomplete="off">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-6 input-row">
+                            <label for="EMAIL">ваш email <span class="req">*</span></label>
+                            <input type="text" name="EMAIL" id="EMAIL" value="" class="input-text field_EMAIL"
+                                placeholder="Ваша почта" autocomplete="email">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-6 input-row">
+                            <label for="PHONE">номер телефона<span class="req">*</span></label>
+                            <input type="text" name="PHONE" id="PHONE" value="" placeholder="Ваш телефон"
+                                class="input-text field_PHONE" autocomplete="tel">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-6 input-row">
+                            <label for="COMPANY">дата рождения</label>
+                            <div style="display: flex">
+                                <input type="text" name="DAY" id="COMPANY" value="" style="width: 33.33%;"
+                                    class="input-text day field_DAY" placeholder="день" autocomplete="off">
+                                <input type="text" name="MOUNT" id="COMPANY" value="" style="width: 33.33%;"
+                                    class="input-text day field_MOUNT" placeholder="месяц" autocomplete="off">
+                                <input type="text" name="YEAR" id="COMPANY" value="" style="width: 33.33%;"
+                                    class="input-text day field_YEAR" placeholder="год" autocomplete="off">
+                            </div>
+                            <span class="js-error tooltip"></span>
+
+                        </div>
+                        <div class="col-xs-6 input-row">
+                            <label for="PASSWORD">пароль</label>
+                            <input type="password" name="PASSWORD" id="PASSWORD" value=""
+                                class="input-text field_PASSWORD" placeholder="пароль мин 6 символов"
+                                autocomplete="off">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-12 input-row orderPolitika active">
+                            <div class="radio-block">
+                                <input type="checkbox" id="personal1" checked>
+                                <label for="personal1">
+                                    даю согласие на обработку моих <a href="#">персональных данных</a>
+                                </label>
+                            </div>
+                        </div>
+                        <br style="clear: both">
+                        <div class="col-xs-12 sRegSubmit">
+                            <input type="submit" name="submit" class="js-order-submit btn btn-primary" id="submit"
+                                value="Зарегистрироваться" style="width: 253px;">
+                        </div>
+                    </div>
+                    <input type="hidden" name="sessid" id="sessid_1" value="f187008b87facfb7e0c693f5cc8ce1fe">
+                </form>
+            </div>
+            <div class="popup js-formDiv" id="registerSuccess">
+                <h2>Поздравляем!</h2>
+                <p>Вы успешно зарегистрировались. Теперь вы можете войти на сайт используя логин и пароль.</p>
+            </div>
+            <div class="popup js-formDiv" id="registerError">
+                <h2>Регистрация не удалась!</h2>
+                <p>К сожалению, нам не удалось зарегистрировать ваш аккаунт. Пожалуйста, проверьте вводимые данные.
+                    Возможно такой пользователь уже существует или вы ошиблись при заполнении форм</p>
+            </div>
+
+
+
+            <div class="popup js-formDiv" id="recoveryPass">
+                <form method="post" class="js-recovery-form regForm formTabber" novalidate="novalidate">
+                    <h2>Восстановление пароля</h2>
+                    <div class="row">
+                        <div class="col-xs-6 input-row">
+                            <label for="MAIL">Mail <span class="req">*</span></label>
+                            <input type="text" name="MAIL" id="MAIL" value="" class="input-text field_MAIL"
+                                placeholder="Ваша почта" autocomplete="off">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-12 input-row">
+                            <label for="EMAIL">Email <span class="req">*</span></label>
+                            <input type="text" name="EMAIL" id="EMAIL" value="" class="input-text field_EMAIL"
+                                placeholder="Ваша почта" autocomplete="email">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-12 input-row orderPolitika active">
+                            <label for="cbx" class="check">
+                                <input type="checkbox" id="cbx" checked="">
+                                даю согласие на обработку моих<a href="/" id="js-link-agree" target="_blank"
+                                    rel="noopener noreferrer"> персональных данных</a>
+                            </label>
+                        </div>
+                        <br style="clear: both">
+                        <div class="col-xs-12 alignCenter">
+                            <input type="submit" name="submit" class="js-recovery-submit btn btn-primary" id="submit"
+                                value="Восстановить пароль">
+                        </div>
+                    </div>
+                    <input type="hidden" name="sessid" id="sessid_2" value="f187008b87facfb7e0c693f5cc8ce1fe">
+                </form>
+            </div>
+            <div class="popup js-formDiv" id="recoverySuccess">
+                <h2>Успех!</h2>
+                <p>На Вашу почту были высланы новый логин и пароль</p>
+            </div>
+            <div class="popup js-formDiv" id="recoveryError">
+                <h2>Неудача!</h2>
+                <p>Нам не удалось восстановить Ваш пароль. Возможно, такого пользователя не существует</p>
+            </div>
+            <div class="popup js-formDiv active" id="doLogin">
+                <form method="post" class="js-login-form regForm formTabber" novalidate="novalidate">
+                    <div class="title_modal">Авторизация/Регистрация</div>
+                    <br style="clear: both">
+                    <div class="row">
+                        <div class="col-12" style="display:flex;">
+                            <p class="btn btn-primary" style="color: #fff;width: 100%;">Вход</p>
+                            <a href="#a" class="js-formLoad registr_btn" data-attr="registration">Регистрация</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 input-row">
+                            <label for="EMAIL">Email <span class="req">*</span></label>
+                            <input type="text" name="EMAIL" id="EMAIL" value="" class="input-text field_EMAIL"
+                                placeholder="Ваша почта" autocomplete="email">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-12 input-row">
+                            <label for="PASSWORD">Пароль <span class="req">*</span></label>
+                            <input type="password" name="PASSWORD" id="PASSWORD" value=""
+                                class="input-text field_PASSWORD" placeholder="Ваш пароль" autocomplete="off">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                    </div>
+                    <div class="forgetPass " style="display: flex;">
+                        <div class="order-checkbox">
+                            <input type="checkbox" id="remember1" name="">
+                            <label for="remember1">запомнить меня</label>
+                        </div>
+                        <a href="#a" class="js-formLoad" data-attr="recoveryPass">Забыли пароль?</a>
+                    </div>
+                    <div class=" input-row orderPolitika active">
+                        <div class="radio-block">
+                            <input type="checkbox" id="personal" checked>
+                            <label for="personal">
+                                даю согласие на обработку моих <a href="#">персональных данных</a>
+                            </label>
+                        </div>
+                    </div>
+                    <br style="clear: both">
+                    <div class="col-xs-12 alignCenter">
+                        <input type="submit" name="submit" class="js-login-submit btn btn-primary " id="submit"
+                            value="Войти" style="width: 222px;">
+                    </div>
+                    <input type="hidden" name="sessid" id="sessid_3" value="f187008b87facfb7e0c693f5cc8ce1fe">
+                </form>
+            </div>
+            <div class="popup js-formDiv" id="loginSuccess">
+                <h2>Успех!</h2>
+                <p>Вы успешно авторизовались. Через несколько секунд страница будет перезагружена</p>
+            </div>
+            <div class="popup js-formDiv" id="loginError">
+                <h2>Неудача!</h2>
+                <p>Вы ввели неправильный логин или пароль. Пожалуйста, проверьте данные и попытайтесь еще раз</p>
+            </div>
+            <div class="popup js-formDiv" id="doQuestion">
+                <form method="post" class="js-question-form regForm formTabber" novalidate="novalidate">
+                    <h2>Задать вопрос</h2>
+                    <div class="row">
+                        <div class="col-xs-6 input-row">
+                            <label for="NAME">Имя <span class="req">*</span></label>
+                            <input type="text" name="NAME" id="NAME" value="" class="input-text field_NAME"
+                                placeholder="Ваше имя" autocomplete="off">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-6 input-row">
+                            <label for="PHONE">Телефон <span class="req">*</span></label>
+                            <input type="text" name="PHONE" id="PHONE" value="" class="input-text field_PHONE"
+                                placeholder="Ваш телефон" autocomplete="off">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-12 input-row">
+                            <label for="MAIL">Почта <span class="req">*</span></label>
+                            <input type="text" name="MAIL" id="MAIL" value="" class="input-text field_MAIL"
+                                placeholder="Ваша почта" autocomplete="off">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-12 input-row">
+                            <label for="EMAIL">Почта <span class="req">*</span></label>
+                            <input type="text" name="EMAIL" id="EMAIL" value="" class="input-text field_EMAIL"
+                                placeholder="Ваша почта" autocomplete="email">
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <div class="col-xs-12 input-row">
+                            <label for="MESSAGE">Ваш вопрос</label>
+                            <textarea name="MESSAGE" id="MESSAGE" value="" class="input-text field_MESSAGE"
+                                placeholder="Ваш вопрос"></textarea>
+                            <span class="js-error tooltip"></span>
+                        </div>
+                        <br style="clear: both;">
+                        <br style="clear: both">
+                        <div class="col-xs-12 alignCenter">
+                            <input type="submit" name="submit" class="js-qusetion-submit" id="submit" value="Войти">
+                        </div>
+                        <br style="clear: both"><br style="clear: both">
+                        <div class="col-xs-12">
+                            <p class="snoska">Поля, помеченные звездочкой (<span class="req">*</span>) обязательны для
+                                заполнения</p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="sessid" id="sessid_4" value="f187008b87facfb7e0c693f5cc8ce1fe">
+                </form>
+            </div>
+            <div class="popup js-formDiv" id="questionSuccess">
+                <h2>Успех!</h2>
+                <p>Вы задали свой вопрос. В ближайшее время мы свяжемся с Вами</p>
+            </div>
+            <div class="popup js-formDiv" id="questionError">
+                <h2>Неудача!</h2>
+                <p>Во время отправки запроса произошла ошибка. Пожалуйста, проверьте данные и попытайтесь еще раз</p>
+            </div>
+
+            <div class="popup js-formDiv" id="getPriceSuccess">
+                <h2>Успех!</h2>
+                <p>Вы успешно отправили заявку. Через несколько секунд страница перезагрузится и вы сможете скачать
+                    прайс-листы</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="libs/jquery/jquery-3.6.4.min.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/fancybox/fancybox.umd.js"></script>
+    <script src="libs/inputmask/jquery.inputmask.min.js"></script>
+    <script src="js/old/jquery.maskedinput.min.js"></script>
+    <script src="libs/micromodal/micromodal.min.js"></script>
+    <script src="js/old/scripts.js"></script>
+
+
+    <!-- new scripts -->
+    <script src="js/new-scripts.js"></script>
+    <!-- /new scripts -->
+</body>
+
+</html>
